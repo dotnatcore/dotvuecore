@@ -1,24 +1,10 @@
 {
-  "name": "asp.net-core web app",
-  "description": "Shows how to deploy ASP.NET Core app on Heroku",
-  "logo": "https://raw.githubusercontent.com/herokumx/herokumxnet/master/NETChatterGroup.png",
-  "keywords": ["heroku", "asp.net-core"],
-  "env": {
-    "PUBLISH_APP_DIR": {
-      "description": "The relative path to main published project",
-      "value" : "/src/DotVueCore.Web"
-    },
-    "LAUNCH_ASSEMBLY_NAME": {
-      "description": "The assembly name, that will be used to run app using Kestrel",
-      "value": "DotVueCore.Web.dll"
-    }
-  },
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    },
-    {
-      "url": "https://github.com/ORuban/aspnetcore-buildpack.git"
-    }
-  ]
+    "name": "ASP.NET Core Mvc Website",
+    "description": "ASP.NET Core mvc website using Asp.Net Core",
+    "website": "http://www.selcukermaya.com/en/",
+    "repository": "https://github.com/knodejs/VueDotnetCore",
+    "keywords": ["aspnet core", "aspnet core mvc", "aspnet core heroku", "heroku"],
+    "buildpacks": [{
+        "url": "https://github.com/se/heroku-core"
+    }]
 }
