@@ -1,0 +1,62 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Threading.Tasks;
+
+namespace DotVueCore.SockJs
+{
+    internal class ReceiveMessageReader
+    {
+        private readonly Stream _body;
+
+        public ReceiveMessageReader(Stream body)
+        {
+            _body = body;
+        }
+
+        public async Task<List<JsonString>> ReadMessages()
+        {
+            var messages = new List<JsonString>();
+            using (var memoryStream = new MemoryStream())
+            {
+                await _body.CopyToAsync(memoryStream);
+#if NET451
+                var buffer = memoryStream.GetBuffer();
+#else
+                ArraySegment<byte> segment;
+                memoryStream.TryGetBuffer(out segment);
+                var buffer = segment.Array;
+#endif
+                if (buffer.Length == 0)
+                {
+                    throw new Exception("Payload expected.");
+                }
+                bool inString = false;
+                int startIndex = 0;
+                for (int i = 0; i < buffer.Length; i++)
+                {
+                    byte b = buffer[i];
+                    if (!inString && b == (byte)'\"')
+                    {
+                        inString = true;
+                        startIndex = i + 1;
+                    }
+                    else if (inString && b == (byte)'\\')
+                    {
+                        i++; // next character is escaped, ignore it
+                    }
+                    else if (inString && b == (byte)'\"')
+                    {
+                        inString = false;
+                        messages.Add(new JsonString(buffer, startIndex, i));
+                    }
+                }
+                if (inString)
+                {
+                    throw new Exception("Broken JSON encoding.");
+                }
+            }
+            return messages;
+        }
+    }
+}

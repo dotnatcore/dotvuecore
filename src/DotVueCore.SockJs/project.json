@@ -1,0 +1,19 @@
+﻿{
+  "version": "1.0.0",
+  "title": "asp.net core SockJS",
+  "dependencies": {
+    "Microsoft.AspNetCore.Http.Abstractions": "1.0.0",
+    "Microsoft.AspNetCore.Cors": "1.0.0",
+    "System.Text.RegularExpressions": "4.3.0",
+    "System.Collections.Concurrent": "4.3.0",
+    "System.Threading.Timer": "4.3.0"
+  },
+  "frameworks": {
+    "netcoreapp1.1": {
+      "imports": [
+        "dotnet5.6",
+        "portable-net45+win8"
+      ]
+    }
+  }
+}
