@@ -23,7 +23,9 @@
         "Nancy": "2.0.0-clinteastwood",
         "Microsoft.AspNetCore.SpaServices": "1.1.0",
         "LiteDB": "3.0.1",
-        "Newtonsoft.Json": "10.0.1-beta1"
+      "Newtonsoft.Json": "10.0.1-beta1",
+      "DotVueCore.SockJs": "1.0.0",
+      "DotVueCore.WebSockets.Sources": "1.0.0"
     },
     "tools": {
         "Microsoft.DotNet.Watcher.Tools": "1.1.0-preview4-final"
