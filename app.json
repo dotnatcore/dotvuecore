@@ -6,11 +6,11 @@
   "env": {
     "PUBLISH_APP_DIR": {
       "description": "The relative path to main published project",
-      "value" : "/src/VueDotnetCore.Web"
+      "value" : "/src/DotVueCore.Web"
     },
     "LAUNCH_ASSEMBLY_NAME": {
       "description": "The assembly name, that will be used to run app using Kestrel",
-      "value": "VueDotnetCore.Web.dll"
+      "value": "DotVueCore.Web.dll"
     }
   },
   "buildpacks": [
