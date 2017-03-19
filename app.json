@@ -1,0 +1,9 @@
+{
+    "name": "ASP.NET Core Vue.Js",
+    "description": "Asp.Net Core",
+    "repository": "https://github.com/knodejs/VueDotnetCore",
+    "keywords": ["aspnet core", "aspnet core mvc", "aspnet core heroku", "heroku"],
+    "buildpacks": [{
+        "url": "https://github.com/se/heroku-core"
+    }]
+}
