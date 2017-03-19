@@ -1,3 +1,6 @@
+using System;
+using DotVueCore.SockJs;
+using DotVueCore.Web.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
@@ -22,6 +25,7 @@ namespace DotVueApp.Web
         }
 
         public IConfigurationRoot Configuration { get; }
+        public static readonly TimeSpan CloseDisconnectTimeout = TimeSpan.FromSeconds(2);
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -51,6 +55,15 @@ namespace DotVueApp.Web
 
             app.UseStaticFiles();
 
+            app.UseWebSockets();
+            app.UseBroadcast("/broadcast");
+            app.UseEcho("/echo", new SockJsOptions() { MaxResponseLength = 4096 });
+            app.UseEcho("/disabled_websocket_echo", new SockJsOptions() { UseWebSocket = false });
+            app.UseEcho("/cookie_needed_echo", new SockJsOptions() { SetJSessionIDCookie = true });
+            app.UseClose("/close", new SockJsOptions() { HeartbeatInterval = TimeSpan.FromSeconds(10), DisconnectTimeout = CloseDisconnectTimeout });
+            app.UseTicker("/ticker");
+            app.UseAmplify("/amplify");
+
             app.UseOwin(x => x.UseNancy(options => options.PassThroughWhenStatusCodesAre(
                 HttpStatusCode.NotFound,
                 HttpStatusCode.InternalServerError
@@ -66,6 +79,8 @@ namespace DotVueApp.Web
                     name: "spa-fallback",
                     defaults: new { controller = "Home", action = "Index" });
             });
+
+            
         }
     }
 }
