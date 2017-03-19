@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 using Nancy;
 using Nancy.Owin;
 
-namespace DotVueApp.Web
+namespace DotVueCore.Web
 {
     public class Startup
     {

@@ -31,6 +31,8 @@
             </div>
         </div>
         <button class="primary full-width" @click="userLogin()">Login</button>
+        <br/>
+        <button class="primary full-width" @click="sendSock()">Send</button>
     </div>
 </div>
 </template>
@@ -38,6 +40,20 @@
 import {
     mapActions
 } from 'vuex'
+
+import Stomp from 'stompjs'
+import SockJS from 'sockjs-client'
+let sock = new SockJS('/broadcast')
+sock.onopen = function() {
+   console.log('open')
+   sock.send('test');
+}
+sock.onmessage = function(e) {
+   console.log('message', e.data)
+}
+sock.onclose = function() {
+   console.log('close')
+}
 export default {
     name: "login",
     data: function data() {
@@ -64,7 +80,12 @@ export default {
                     this.loading = false;
                     this.errors = res.errors;
                 });
+        },
+        sendSock(){
+          sock.send('test'+new Date+0)
         }
+    },
+    mounted: function mounted() {
     }
 }
 </script>
