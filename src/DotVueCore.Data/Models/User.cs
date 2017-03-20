@@ -1,4 +1,4 @@
-﻿using DotVueApp.DataAccess.Entities;
+﻿using DotVueCore.DataAccess.Entities;
 
 namespace DotVueCore.Data.Models
 {

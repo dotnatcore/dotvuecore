@@ -5,7 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Data.Common;
 using System.Collections.Generic;
-using DotVueApp.DataAccess.Entities;
+using DotVueCore.DataAccess.Entities;
 
 namespace DotVueCore.Data.Models
 {

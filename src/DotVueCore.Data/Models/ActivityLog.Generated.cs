@@ -8,7 +8,7 @@
 // the code is regenerated.
 //------------------------------------------------------------------------------
 
-using DotVueApp.Data.Models;
+using DotVueCore.Data.Models;
 
 namespace DotVueCore.Data.Models
 {
