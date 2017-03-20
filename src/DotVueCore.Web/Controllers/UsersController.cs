@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
+using DotVueCore.Data.Models;
 using DotVueCore.DataAccess.Uow;
 using Microsoft.AspNetCore.Mvc;
 
