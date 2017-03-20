@@ -15,8 +15,9 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Data.Common;
 using System.Collections.Generic;
+using DotVueCore.Data.Models;
 
-namespace DotVueApp.Data.Models
+namespace DotVueCore.Data.Models
 {
     public partial class ActivityType {
 

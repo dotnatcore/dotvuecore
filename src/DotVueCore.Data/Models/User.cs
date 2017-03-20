@@ -1,6 +1,6 @@
 ﻿using DotVueApp.DataAccess.Entities;
 
-namespace DotVueApp.Data.Models
+namespace DotVueCore.Data.Models
 {
 
     public partial class User: EntityBase

@@ -12,8 +12,9 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using DotVueApp.DataAccess.Context;
+using DotVueCore.Data.Models;
 
-namespace DotVueApp.Data.Models
+namespace DotVueCore.Data.Models
 {
 
     public partial class DotVueAppContext : EntityContextBase<DotVueAppContext>

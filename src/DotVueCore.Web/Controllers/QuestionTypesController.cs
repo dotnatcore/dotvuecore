@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using DotVueApp.Data.Models;
-using DotVueApp.DataAccess.Query;
-using DotVueApp.DataAccess.Uow;
+﻿using System.Threading.Tasks;
+using DotVueCore.DataAccess.Uow;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
-namespace DotVueApp.Api.Controllers
+namespace DotVueCore.Web.Controllers
 {
     [Route("api/[controller]")]
     public class QuestionTypesController : Controller

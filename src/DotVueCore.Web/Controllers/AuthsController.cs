@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using DotVueCore.Data.Models;
-using DotVueCore.DataAccess.Uow;
-using DotVueCore.ViewModel.Auths;
 using DotVueCore.DataAccess.Uow;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -12,7 +8,7 @@ using DotVueCore.ViewModel.Auths;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace DotVueApp.Api.Controllers
+namespace DotVueCore.Web.Controllers
 {
     [Route("api/[controller]")]
     public class AuthsController : Controller

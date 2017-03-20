@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Data.Common;
 using System.Collections.Generic;
 
-namespace DotVueApp.Data.Models
+namespace DotVueCore.Data.Models
 {
 
     public partial class RtoUser

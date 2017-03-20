@@ -7,7 +7,7 @@ using System.Data.Common;
 using System.Collections.Generic;
 using DotVueApp.DataAccess.Entities;
 
-namespace DotVueApp.Data.Models
+namespace DotVueCore.Data.Models
 {
 
     public partial class QuestionType: EntityBase
