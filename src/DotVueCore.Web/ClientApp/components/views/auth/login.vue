@@ -9,7 +9,7 @@
         <button><i>help</i></button>
     </div>
     <div class="layout-view layout-padding">
-        <div class="list">
+        <div class="list md-4">
             <div class="item three-lines">
                 <i class="item-primary">mail</i>
                 <div class="item-content">
@@ -49,7 +49,7 @@ sock.onopen = function() {
    sock.send('test');
 }
 sock.onmessage = function(e) {
-   console.log('message', e.data)
+   console.log('message', e)
 }
 sock.onclose = function() {
    console.log('close')
@@ -82,7 +82,7 @@ export default {
                 });
         },
         sendSock(){
-          sock.send('test'+new Date+0)
+          sock.send(+new Date)
         }
     },
     mounted: function mounted() {
