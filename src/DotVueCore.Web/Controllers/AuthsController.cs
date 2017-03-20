@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using DotVueApp.Data.Models;
-using DotVueApp.DataAccess.Uow;
-using DotVueApp.ViewModel.Auths;
+using DotVueCore.Data.Models;
+using DotVueCore.DataAccess.Uow;
+using DotVueCore.ViewModel.Auths;
+using DotVueCore.DataAccess.Uow;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using DotVueCore.ViewModel.Auths;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 

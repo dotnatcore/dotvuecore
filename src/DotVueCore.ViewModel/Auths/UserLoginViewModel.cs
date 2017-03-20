@@ -1,4 +1,4 @@
-﻿namespace DotVueApp.ViewModel.Auths
+﻿namespace DotVueCore.ViewModel.Auths
 {
     public class UserLoginViewModel
     {
