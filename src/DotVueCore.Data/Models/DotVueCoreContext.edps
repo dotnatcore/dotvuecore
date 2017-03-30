@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityDeveloper Version="6.0.205.0">
+  <ModelSettings xmlns:ed="http://devart.com/schemas/EntityDeveloper/1.0" ConnectionStringInAppConfig="False" DetectManyToManyAssociations="False" DetectTPTInheritance="False">
+    <Connection ConnectionString="Data Source=podiumdbserver.database.windows.net;Initial Catalog=PodiumUAT;Integrated Security=False;Persist Security Info=True;User ID=podium;Password=123@gjinfo" Provider="System.Data.SqlClient" />
+    <Generation>
+      <GeneratedFiles>
+        <File Name="DotVueCoreContext.cs" />
+        <File Name="ActivityLog.cs" OverwriteMode="None" />
+        <File Name="ActivityLog.Generated.cs" />
+        <File Name="ActivityLogTypePermission.cs" OverwriteMode="None" />
+        <File Name="ActivityLogTypePermission.Generated.cs" />
+        <File Name="ActivityType.cs" OverwriteMode="None" />
+        <File Name="ActivityType.Generated.cs" />
+        <File Name="AddressInfo.cs" OverwriteMode="None" />
+        <File Name="AddressInfo.Generated.cs" />
+        <File Name="AspnetRole.cs" OverwriteMode="None" />
+        <File Name="AspnetRole.Generated.cs" />
+        <File Name="AspnetUserLogin.cs" OverwriteMode="None" />
+        <File Name="AspnetUserLogin.Generated.cs" />
+        <File Name="AspnetUserRole.cs" OverwriteMode="None" />
+        <File Name="AspnetUserRole.Generated.cs" />
+        <File Name="Assignment.cs" OverwriteMode="None" />
+        <File Name="Assignment.Generated.cs" />
+        <File Name="AvetmisEnrollment.cs" OverwriteMode="None" />
+        <File Name="AvetmisEnrollment.Generated.cs" />
+        <File Name="Category.cs" OverwriteMode="None" />
+        <File Name="Category.Generated.cs" />
+        <File Name="Certificate.cs" OverwriteMode="None" />
+        <File Name="Certificate.Generated.cs" />
+        <File Name="ClassInfo.cs" OverwriteMode="None" />
+        <File Name="ClassInfo.Generated.cs" />
+        <File Name="ClientBackground.cs" OverwriteMode="None" />
+        <File Name="ClientBackground.Generated.cs" />
+        <File Name="Client.cs" OverwriteMode="None" />
+        <File Name="Client.Generated.cs" />
+        <File Name="CompleteType.cs" OverwriteMode="None" />
+        <File Name="CompleteType.Generated.cs" />
+        <File Name="Content.cs" OverwriteMode="None" />
+        <File Name="Content.Generated.cs" />
+        <File Name="ContentType.cs" OverwriteMode="None" />
+        <File Name="ContentType.Generated.cs" />
+        <File Name="CountryInfo.cs" OverwriteMode="None" />
+        <File Name="CountryInfo.Generated.cs" />
+        <File Name="CourseContent.cs" OverwriteMode="None" />
+        <File Name="CourseContent.Generated.cs" />
+        <File Name="CourseInfo.cs" OverwriteMode="None" />
+        <File Name="CourseInfo.Generated.cs" />
+        <File Name="CourseTest.cs" OverwriteMode="None" />
+        <File Name="CourseTest.Generated.cs" />
+        <File Name="CourseUploadFile.cs" OverwriteMode="None" />
+        <File Name="CourseUploadFile.Generated.cs" />
+        <File Name="Currency.cs" OverwriteMode="None" />
+        <File Name="Currency.Generated.cs" />
+        <File Name="DeliveryLocation.cs" OverwriteMode="None" />
+        <File Name="DeliveryLocation.Generated.cs" />
+        <File Name="DisabilityOption.cs" OverwriteMode="None" />
+        <File Name="DisabilityOption.Generated.cs" />
+        <File Name="Envet.cs" OverwriteMode="None" />
+        <File Name="Envet.Generated.cs" />
+        <File Name="ErrorLog.cs" OverwriteMode="None" />
+        <File Name="ErrorLog.Generated.cs" />
+        <File Name="Evidence.cs" OverwriteMode="None" />
+        <File Name="Evidence.Generated.cs" />
+        <File Name="FileRelation.cs" OverwriteMode="None" />
+        <File Name="FileRelation.Generated.cs" />
+        <File Name="File.cs" OverwriteMode="None" />
+        <File Name="File.Generated.cs" />
+        <File Name="FileType.cs" OverwriteMode="None" />
+        <File Name="FileType.Generated.cs" />
+        <File Name="InvoiceItem.cs" OverwriteMode="None" />
+        <File Name="InvoiceItem.Generated.cs" />
+        <File Name="Invoice.cs" OverwriteMode="None" />
+        <File Name="Invoice.Generated.cs" />
+        <File Name="Job.cs" OverwriteMode="None" />
+        <File Name="Job.Generated.cs" />
+        <File Name="Language.cs" OverwriteMode="None" />
+        <File Name="Language.Generated.cs" />
+        <File Name="LeanerDisabilityOption.cs" OverwriteMode="None" />
+        <File Name="LeanerDisabilityOption.Generated.cs" />
+        <File Name="LeanerPriorEducation.cs" OverwriteMode="None" />
+        <File Name="LeanerPriorEducation.Generated.cs" />
+        <File Name="LearnerInfo.cs" OverwriteMode="None" />
+        <File Name="LearnerInfo.Generated.cs" />
+        <File Name="LearnerPostAddressInfo.cs" OverwriteMode="None" />
+        <File Name="LearnerPostAddressInfo.Generated.cs" />
+        <File Name="Location.cs" OverwriteMode="None" />
+        <File Name="Location.Generated.cs" />
+        <File Name="Module.cs" OverwriteMode="None" />
+        <File Name="Module.Generated.cs" />
+        <File Name="NotifyEvent.cs" OverwriteMode="None" />
+        <File Name="NotifyEvent.Generated.cs" />
+        <File Name="NotifyReceiver.cs" OverwriteMode="None" />
+        <File Name="NotifyReceiver.Generated.cs" />
+        <File Name="Notify.cs" OverwriteMode="None" />
+        <File Name="Notify.Generated.cs" />
+        <File Name="OrganizationAddressInfo.cs" OverwriteMode="None" />
+        <File Name="OrganizationAddressInfo.Generated.cs" />
+        <File Name="Organization.cs" OverwriteMode="None" />
+        <File Name="Organization.Generated.cs" />
+        <File Name="OrganizationType.cs" OverwriteMode="None" />
+        <File Name="OrganizationType.Generated.cs" />
+        <File Name="OrganizationUser.cs" OverwriteMode="None" />
+        <File Name="OrganizationUser.Generated.cs" />
+        <File Name="Permission.cs" OverwriteMode="None" />
+        <File Name="Permission.Generated.cs" />
+        <File Name="PriorEducation.cs" OverwriteMode="None" />
+        <File Name="PriorEducation.Generated.cs" />
+        <File Name="ProductFileNote.cs" OverwriteMode="None" />
+        <File Name="ProductFileNote.Generated.cs" />
+        <File Name="ProductFile.cs" OverwriteMode="None" />
+        <File Name="ProductFile.Generated.cs" />
+        <File Name="QualificationGroupFilter.cs" OverwriteMode="None" />
+        <File Name="QualificationGroupFilter.Generated.cs" />
+        <File Name="QualificationGroupRule.cs" OverwriteMode="None" />
+        <File Name="QualificationGroupRule.Generated.cs" />
+        <File Name="QualificationGroup.cs" OverwriteMode="None" />
+        <File Name="QualificationGroup.Generated.cs" />
+        <File Name="QualificationGroupSetRule.cs" OverwriteMode="None" />
+        <File Name="QualificationGroupSetRule.Generated.cs" />
+        <File Name="QualificationGroupSet.cs" OverwriteMode="None" />
+        <File Name="QualificationGroupSet.Generated.cs" />
+        <File Name="QualificationMaster.cs" OverwriteMode="None" />
+        <File Name="QualificationMaster.Generated.cs" />
+        <File Name="QualificationOrg.cs" OverwriteMode="None" />
+        <File Name="QualificationOrg.Generated.cs" />
+        <File Name="QualificationOrgUnit.cs" OverwriteMode="None" />
+        <File Name="QualificationOrgUnit.Generated.cs" />
+        <File Name="Qualification.cs" OverwriteMode="None" />
+        <File Name="Qualification.Generated.cs" />
+        <File Name="QualificationScope.cs" OverwriteMode="None" />
+        <File Name="QualificationScope.Generated.cs" />
+        <File Name="QualificationTranProduct.cs" OverwriteMode="None" />
+        <File Name="QualificationTranProduct.Generated.cs" />
+        <File Name="QualificationTran.cs" OverwriteMode="None" />
+        <File Name="QualificationTran.Generated.cs" />
+        <File Name="QualificationTranUnit.cs" OverwriteMode="None" />
+        <File Name="QualificationTranUnit.Generated.cs" />
+        <File Name="QualificationUnitMaster.cs" OverwriteMode="None" />
+        <File Name="QualificationUnitMaster.Generated.cs" />
+        <File Name="QualificationUnit.cs" OverwriteMode="None" />
+        <File Name="QualificationUnit.Generated.cs" />
+        <File Name="QuestionFillBlankOption.cs" OverwriteMode="None" />
+        <File Name="QuestionFillBlankOption.Generated.cs" />
+        <File Name="QuestionFillBlank.cs" OverwriteMode="None" />
+        <File Name="QuestionFillBlank.Generated.cs" />
+        <File Name="QuestionFreeText.cs" OverwriteMode="None" />
+        <File Name="QuestionFreeText.Generated.cs" />
+        <File Name="QuestionOption.cs" OverwriteMode="None" />
+        <File Name="QuestionOption.Generated.cs" />
+        <File Name="Question.cs" OverwriteMode="None" />
+        <File Name="Question.Generated.cs" />
+        <File Name="QuestionType.cs" OverwriteMode="None" />
+        <File Name="QuestionType.Generated.cs" />
+        <File Name="RandomizeQuestion.cs" OverwriteMode="None" />
+        <File Name="RandomizeQuestion.Generated.cs" />
+        <File Name="Role.cs" OverwriteMode="None" />
+        <File Name="Role.Generated.cs" />
+        <File Name="RtoAddressInfo.cs" OverwriteMode="None" />
+        <File Name="RtoAddressInfo.Generated.cs" />
+        <File Name="RtoInfo.cs" OverwriteMode="None" />
+        <File Name="RtoInfo.Generated.cs" />
+        <File Name="RtoOrganization.cs" OverwriteMode="None" />
+        <File Name="RtoOrganization.Generated.cs" />
+        <File Name="RtoOrganizationUser.cs" OverwriteMode="None" />
+        <File Name="RtoOrganizationUser.Generated.cs" />
+        <File Name="RtoUser.cs" OverwriteMode="None" />
+        <File Name="RtoUser.Generated.cs" />
+        <File Name="Scorm.cs" OverwriteMode="None" />
+        <File Name="Scorm.Generated.cs" />
+        <File Name="Section.cs" OverwriteMode="None" />
+        <File Name="Section.Generated.cs" />
+        <File Name="Setting.cs" OverwriteMode="None" />
+        <File Name="Setting.Generated.cs" />
+        <File Name="StateInfo.cs" OverwriteMode="None" />
+        <File Name="StateInfo.Generated.cs" />
+        <File Name="StudentClassInfo.cs" OverwriteMode="None" />
+        <File Name="StudentClassInfo.Generated.cs" />
+        <File Name="StudentNote.cs" OverwriteMode="None" />
+        <File Name="StudentNote.Generated.cs" />
+        <File Name="TestQuestion.cs" OverwriteMode="None" />
+        <File Name="TestQuestion.Generated.cs" />
+        <File Name="Test.cs" OverwriteMode="None" />
+        <File Name="Test.Generated.cs" />
+        <File Name="TimeZone.cs" OverwriteMode="None" />
+        <File Name="TimeZone.Generated.cs" />
+        <File Name="TrainerClassInfo.cs" OverwriteMode="None" />
+        <File Name="TrainerClassInfo.Generated.cs" />
+        <File Name="TrainingPackage.cs" OverwriteMode="None" />
+        <File Name="TrainingPackage.Generated.cs" />
+        <File Name="TrainingQualification.cs" OverwriteMode="None" />
+        <File Name="TrainingQualification.Generated.cs" />
+        <File Name="UnitAssignment.cs" OverwriteMode="None" />
+        <File Name="UnitAssignment.Generated.cs" />
+        <File Name="UnitContent.cs" OverwriteMode="None" />
+        <File Name="UnitContent.Generated.cs" />
+        <File Name="UnitMaster.cs" OverwriteMode="None" />
+        <File Name="UnitMaster.Generated.cs" />
+        <File Name="Unit.cs" OverwriteMode="None" />
+        <File Name="Unit.Generated.cs" />
+        <File Name="UnitScorm.cs" OverwriteMode="None" />
+        <File Name="UnitScorm.Generated.cs" />
+        <File Name="UnitSection.cs" OverwriteMode="None" />
+        <File Name="UnitSection.Generated.cs" />
+        <File Name="UnitTest.cs" OverwriteMode="None" />
+        <File Name="UnitTest.Generated.cs" />
+        <File Name="UnitUploadFile.cs" OverwriteMode="None" />
+        <File Name="UnitUploadFile.Generated.cs" />
+        <File Name="UploadFile.cs" OverwriteMode="None" />
+        <File Name="UploadFile.Generated.cs" />
+        <File Name="UserAddressInfo.cs" OverwriteMode="None" />
+        <File Name="UserAddressInfo.Generated.cs" />
+        <File Name="UserAssignment.cs" OverwriteMode="None" />
+        <File Name="UserAssignment.Generated.cs" />
+        <File Name="UserClaim.cs" OverwriteMode="None" />
+        <File Name="UserClaim.Generated.cs" />
+        <File Name="UserContent.cs" OverwriteMode="None" />
+        <File Name="UserContent.Generated.cs" />
+        <File Name="UserDocument.cs" OverwriteMode="None" />
+        <File Name="UserDocument.Generated.cs" />
+        <File Name="UserGroupDetail.cs" OverwriteMode="None" />
+        <File Name="UserGroupDetail.Generated.cs" />
+        <File Name="UserGroup.cs" OverwriteMode="None" />
+        <File Name="UserGroup.Generated.cs" />
+        <File Name="UserQualification.cs" OverwriteMode="None" />
+        <File Name="UserQualification.Generated.cs" />
+        <File Name="UserQuestionAnswer.cs" OverwriteMode="None" />
+        <File Name="UserQuestionAnswer.Generated.cs" />
+        <File Name="UserQuestionAttempt.cs" OverwriteMode="None" />
+        <File Name="UserQuestionAttempt.Generated.cs" />
+        <File Name="UserQuestionFillBlankOption.cs" OverwriteMode="None" />
+        <File Name="UserQuestionFillBlankOption.Generated.cs" />
+        <File Name="UserQuestionFillBlank.cs" OverwriteMode="None" />
+        <File Name="UserQuestionFillBlank.Generated.cs" />
+        <File Name="UserQuestionOption.cs" OverwriteMode="None" />
+        <File Name="UserQuestionOption.Generated.cs" />
+        <File Name="UserQuestionOptionTemplate.cs" OverwriteMode="None" />
+        <File Name="UserQuestionOptionTemplate.Generated.cs" />
+        <File Name="UserQuestion.cs" OverwriteMode="None" />
+        <File Name="UserQuestion.Generated.cs" />
+        <File Name="UserQuestionTemplate.cs" OverwriteMode="None" />
+        <File Name="UserQuestionTemplate.Generated.cs" />
+        <File Name="UserRandomizeQuestion.cs" OverwriteMode="None" />
+        <File Name="UserRandomizeQuestion.Generated.cs" />
+        <File Name="UserRegistrationToken.cs" OverwriteMode="None" />
+        <File Name="UserRegistrationToken.Generated.cs" />
+        <File Name="User.cs" OverwriteMode="None" />
+        <File Name="User.Generated.cs" />
+        <File Name="UserScorm.cs" OverwriteMode="None" />
+        <File Name="UserScorm.Generated.cs" />
+        <File Name="UserState.cs" OverwriteMode="None" />
+        <File Name="UserState.Generated.cs" />
+        <File Name="UserTestAttempt.cs" OverwriteMode="None" />
+        <File Name="UserTestAttempt.Generated.cs" />
+        <File Name="UserTestQuestion.cs" OverwriteMode="None" />
+        <File Name="UserTestQuestion.Generated.cs" />
+        <File Name="UserTest.cs" OverwriteMode="None" />
+        <File Name="UserTest.Generated.cs" />
+        <File Name="UserTestState.cs" OverwriteMode="None" />
+        <File Name="UserTestState.Generated.cs" />
+        <File Name="UserTestTemplate.cs" OverwriteMode="None" />
+        <File Name="UserTestTemplate.Generated.cs" />
+        <File Name="UserUnit.cs" OverwriteMode="None" />
+        <File Name="UserUnit.Generated.cs" />
+        <File Name="UserUploadFile.cs" OverwriteMode="None" />
+        <File Name="UserUploadFile.Generated.cs" />
+        <File Name="ZipContent.cs" OverwriteMode="None" />
+        <File Name="ZipContent.Generated.cs" />
+        <File Name="ZipJob.cs" OverwriteMode="None" />
+        <File Name="ZipJob.Generated.cs" />
+      </GeneratedFiles>
+    </Generation>
+    <DatabaseFirstNamingRules>
+      <EntitySet PluralizationName="Pluralize" />
+      <Class UseSchemaAsPrefix="False" PluralizeCollectionNavigationPropertyName="True" AddConstraintColumnsToNavigationPropertyName="False" RemoveUnderscores="True" RemoveInvalidCharacters="True" CodeCase="FirstLetterUppercase" AddPrefix="" AddSuffix="" RemovePrefixes="" RemoveSuffixes="" PluralizationName="Singularize" />
+      <Property RemoveUnderscores="True" RemoveInvalidCharacters="True" CodeCase="FirstLetterUppercase" AddPrefix="" AddSuffix="" RemovePrefixes="" RemoveSuffixes="" PluralizationName="Unchanged" />
+    </DatabaseFirstNamingRules>
+    <ModelFirst StorageSynchronizationEnabled="False" TargetSchema="dbo" TargetProviderName="System.Data.SqlClient">
+      <TargetServer Server="SQL Server" ServerVersion="2014" />
+      <ModelFirstNamingRules>
+        <Table RemoveUnderscores="False" RemoveInvalidCharacters="True" CodeCase="Unchanged" AddPrefix="" AddSuffix="" RemovePrefixes="" RemoveSuffixes="" PluralizationName="Pluralize" />
+        <Column RemoveUnderscores="False" RemoveInvalidCharacters="True" CodeCase="Unchanged" AddPrefix="" AddSuffix="" RemovePrefixes="" RemoveSuffixes="" PluralizationName="Unchanged" />
+      </ModelFirstNamingRules>
+    </ModelFirst>
+    <Diagrams>
+      <Diagram Name="PodiumDr" DefaultDiagram="True" />
+    </Diagrams>
+    <Templates>
+      <Template Name="EF Core Podium" Description="New empty template for Devart Entity Developer C# code generation." Enabled="True" File="DotVueCoreContext.Blank.tmpl">
+        <ed:Property Name="ValidationFramework" Type="EntityDeveloper.TemplateEngine.ValidationFramework, EntityDeveloper.Common, Version=6.0.205.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <ValidationFramework>None</ValidationFramework>
+        </ed:Property>
+        <ed:Property Name="ValidationErrorMessages" Type="EntityDeveloper.TemplateEngine.ValidationErrorMessages, EntityDeveloper.Common, Version=6.0.205.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <ValidationErrorMessages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+        </ed:Property>
+        <ed:Property Name="EntitiesOutput" Type="EntityDeveloper.TemplateEngine.OutputInfo, EntityDeveloper.Common, Version=6.0.205.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <OutputInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <Project />
+            <ProjectFolder />
+            <DestinationFolder />
+          </OutputInfo>
+        </ed:Property>
+        <ed:Property Name="ContextOutput" Type="EntityDeveloper.TemplateEngine.OutputInfo, EntityDeveloper.Common, Version=6.0.205.0, Culture=neutral, PublicKeyToken=09af7300eec23701">
+          <OutputInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <Project />
+            <ProjectFolder />
+            <DestinationFolder />
+          </OutputInfo>
+        </ed:Property>
+        <ed:Property Name="FilePerClass" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="ModelNameAsFilesPrefix" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="HeaderTimestampVersionControlTag" Type="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <string d6p1:nil="true" xmlns:d6p1="http://www.w3.org/2001/XMLSchema-instance" />
+        </ed:Property>
+        <ed:Property Name="PropertyChangeNotifiers" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="PropertyChangePartialMethods" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="ImplementEquals" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="ImplementCloneable" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="GeneratePartialClass" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>true</boolean>
+        </ed:Property>
+        <ed:Property Name="GenerateDataContracts" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="GenerateDummyComments" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+        <ed:Property Name="GenerateSerializableAttributes" Type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <boolean>false</boolean>
+        </ed:Property>
+      </Template>
+    </Templates>
+    <AttributeAssemblies />
+  </ModelSettings>
+</EntityDeveloper>

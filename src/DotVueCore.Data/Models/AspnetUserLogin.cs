@@ -9,7 +9,7 @@ using System.Collections.Generic;
 namespace DotVueCore.Data.Models
 {
 
-    public partial class UserTypePermission
+    public partial class AspnetUserLogin
     {
     }
 }

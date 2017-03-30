@@ -1,5 +1,5 @@
 <template>
-<div class="toolbar">
+<div class="toolbar"  v-show="getLayoutNeeded">
     <q-ajax-bar color="#80cbc4"></q-ajax-bar>
     <!--<button class="left-drawer-opener">
           <i>menu</i>
@@ -32,11 +32,22 @@
 </div>
 </template>
 <script>
-export default {}
+import { mapMutations, mapGetters } from 'vuex'
+export default {
+    computed: {
+      ...mapGetters(['getLayoutNeeded'])
+    },
+    methods: {
+      ...mapMutations(['setMobileMode'])
+    }
+}
 </script>
 <style scoped>
 .toolbar {
     height: 50px;
     background-color: #0288d1 !important;
 }
+.right-itens a{
+    margin-right: 10px;
+  }
 </style>
