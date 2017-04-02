@@ -18,11 +18,12 @@ using System.Collections.Generic;
 
 namespace DotVueCore.Data.Models
 {
-    public partial class Category {
+    public partial class Blog {
 
-        public Category()
+        public Blog()
         {
-            this.CategoriesPosts = new List<CategoriesPost>();
+            this.Posts = new List<Post>();
+            this.UsersBlogs = new List<UsersBlog>();
             OnCreated();
         }
 
@@ -32,13 +33,37 @@ namespace DotVueCore.Data.Models
             set;
         }
 
-        public virtual string Name
+        public virtual string Title
         {
             get;
             set;
         }
 
-        public virtual IList<CategoriesPost> CategoriesPosts
+        public virtual string SubTitle
+        {
+            get;
+            set;
+        }
+
+        public virtual System.Nullable<bool> AllowsComments
+        {
+            get;
+            set;
+        }
+
+        public virtual System.Nullable<System.DateTime> CreatedAt
+        {
+            get;
+            set;
+        }
+
+        public virtual IList<Post> Posts
+        {
+            get;
+            set;
+        }
+
+        public virtual IList<UsersBlog> UsersBlogs
         {
             get;
             set;

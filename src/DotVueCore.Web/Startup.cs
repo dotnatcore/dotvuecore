@@ -1,6 +1,12 @@
 using System;
+using AspectCore.Extensions.DependencyInjection;
+using AutoMapper;
+using DotVueCore.Data;
+using DotVueCore.Data.Models;
+using DotVueCore.Interfaces;
 using DotVueCore.SockJs;
 using DotVueCore.Web.Middlewares;
+using DotVueCore.Web.Refections;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
@@ -9,6 +15,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Nancy;
 using Nancy.Owin;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
+using System.Reflection;
+using DotVueCore.ExMapper;
 
 namespace DotVueCore.Web
 {
@@ -28,10 +38,35 @@ namespace DotVueCore.Web
         public static readonly TimeSpan CloseDisconnectTimeout = TimeSpan.FromSeconds(2);
 
         // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<BlogEntities>(options => options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
+            services.AddTransient<IBlogRepository, BlogRepository>();
+
+            services.AddCors();
             // Add framework services.
-            services.AddMvc();
+            services.AddMvc()
+                .AddControllersAsServices()
+                    .AddJsonOptions(options =>
+                    {
+                        options.SerializerSettings.ContractResolver = new Newtonsoft.Json.Serialization.DefaultContractResolver();
+                        //options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+                    });
+
+            services.AddMvcCore();
+
+            Mapper.Initialize(config => {
+                var assemblys = AppDomain.CurrentDomain.GetAssemblies().Where(p => p.FullName.Contains("DotVueCore.ViewModel"));
+                foreach (var assembly in assemblys)
+                {
+                    var types = assembly.GetTypes();
+                    foreach (var type in types)
+                    {
+                        type.GetTypeInfo().Assembly.MapTypes(config);
+                    }
+                }
+            });
+            return new AspectCoreServiceProviderFactory().CreateServiceProvider(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -68,6 +103,8 @@ namespace DotVueCore.Web
                 HttpStatusCode.NotFound,
                 HttpStatusCode.InternalServerError
             )));
+
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
             app.UseMvc(routes =>
             {

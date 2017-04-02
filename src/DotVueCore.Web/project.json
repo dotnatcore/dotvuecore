@@ -8,6 +8,7 @@
     },
     "Microsoft.AspNetCore.Routing": "1.1.1",
     "AspectCore.Extensions.DependencyInjection": "1.1.0-rc1-13250",
+    "AutoMapper": "6.0.2",
     "System.Linq": "4.3.0",
     "Microsoft.AspNetCore.Diagnostics": "1.1.1",
     "Microsoft.AspNetCore.Mvc": "1.1.2",

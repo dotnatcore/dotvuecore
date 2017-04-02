@@ -1,0 +1,14 @@
+﻿{
+  "version": "1.0.0-*",
+
+  "dependencies": {
+    "AutoMapper": "6.0.2",
+    "NETStandard.Library": "1.6.1",
+    "System.Reflection.TypeExtensions": "4.3.0"
+  },
+  "frameworks": {
+    "netcoreapp1.1": {
+      "imports": "dotnet5.6"
+    }
+  }
+}

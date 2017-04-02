@@ -4,8 +4,6 @@ using DotVueCore.Data.Models;
 using DotVueCore.DataAccess.Uow;
 using Microsoft.AspNetCore.Mvc;
 
-// For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace DotVueCore.Web.Controllers
 {
     [Route("api/[controller]")]
@@ -28,8 +26,8 @@ namespace DotVueCore.Web.Controllers
                 //    return query.Include(b => b.Questions)
                 //                    .ThenInclude(a => a.RtoInfo);
                 //});
-                var questionTypes = await repository.GetAllAsync(null, null);
-                return Ok(questionTypes.Take(15));
+                var users = await repository.GetAllAsync(null, null);
+                return Ok(users.Take(15));
             }
         }
 

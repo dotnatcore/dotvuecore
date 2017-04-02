@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<efcore namespace="DotVueCore.Data.Models" p1:name="BlogEntities" p1:Guid="1f009138-88f4-49bd-9b2e-f3903d23f6c0" xmlns:p1="http://devart.com/schemas/EntityDeveloper/1.0">
+  <class name="Blog" entity-set="Blogs" table="Blogs" schema="dbo" p1:Guid="cefa5bc7-6d37-4265-9a8e-985cbf2f0fb9">
+    <id name="Id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="1ebb43b2-0e33-4c3f-874a-bd18685cf3f4">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Title" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="bb78c3ef-6c57-41ed-a58f-ce2558321bab">
+      <column name="Title" not-null="False" length="50" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="SubTitle" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f0b7a8c9-4fca-4b0e-b130-c69e2ba04f0e">
+      <column name="SubTitle" not-null="False" length="50" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="AllowsComments" type="Boolean" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="66ccc48b-0a58-4602-8c4a-f119428d2b98">
+      <column name="AllowsComments" not-null="False" sql-type="bit" p1:unicode="False" />
+    </property>
+    <property name="CreatedAt" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="4244cbaf-2aca-4421-a5df-55d0d0b7f311">
+      <column name="CreatedAt" not-null="False" sql-type="datetime2" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="Category" entity-set="Categories" table="Categories" schema="dbo" p1:Guid="e68acbb6-8f8c-4ac6-bf7e-524fb9baf41f">
+    <id name="Id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="2892bf21-493f-4bec-8b46-af45ca6b9035">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="48c00a32-7e48-4c5a-9337-d6ebff7f7a0f">
+      <column name="Name" not-null="False" length="10" sql-type="nchar" p1:fixed-length="True" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="CategoriesPost" entity-set="CategoriesPosts" table="CategoriesPosts" schema="dbo" p1:Guid="8180b2c7-35f5-43b1-8e32-2bde5edccac3">
+    <composite-id>
+      <key-property name="CategoryId" type="Int32" p1:ValidateRequired="true" p1:Guid="3d6a849b-e826-4536-b182-d41a5daaaf0c">
+        <column name="CategoryId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+      </key-property>
+      <key-property name="PostId" type="Int32" p1:ValidateRequired="true" p1:Guid="a5d8694a-87ae-49f4-866a-e5a7700f8418">
+        <column name="PostId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+      </key-property>
+    </composite-id>
+  </class>
+  <class name="Comment" entity-set="Comments" table="Comments" schema="dbo" p1:Guid="d4be19de-cb24-4b33-9d29-a15322b99d83">
+    <id name="Id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="32cc6f1c-10ad-4b5d-b5d8-7b4a3190bfe1">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="6b8d02ff-d5db-4dd7-9e61-8c224f2baea6">
+      <column name="Name" not-null="False" length="50" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="Email" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="0dc36798-0293-4903-a3c7-3f4c4d8d6f43">
+      <column name="Email" not-null="False" length="50" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="HomePage" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="783a542f-901c-4da1-86a3-edff541d563b">
+      <column name="HomePage" not-null="False" length="50" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="Ip" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="1a537d43-9b26-488b-91c9-c98a8ad4b743">
+      <column name="Ip" not-null="False" length="50" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="Text" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="b848856b-8860-40fd-880e-7c37c408966f">
+      <column name="Text" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="PostId" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="1f7dd6e9-1860-4523-8ee3-281cdda47db6">
+      <column name="PostId" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="Post" entity-set="Posts" table="Posts" schema="dbo" p1:Guid="bc999dbe-95b1-4709-a48c-e8a6725d8726">
+    <id name="Id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="69c64207-716a-4df3-9e53-1e43640955f3">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Discriminator" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="e0df0a53-6866-40bf-8371-2040937ae2eb">
+      <column name="Discriminator" not-null="False" length="50" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="Title" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="a2c4ea29-b1a5-4888-9ec0-8407ac9618ff">
+      <column name="Title" not-null="False" length="50" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="Text" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="4108477a-5f95-48c7-a8ce-81a2a30840c4">
+      <column name="Text" not-null="False" sql-type="nvarchar(max)" p1:unicode="True" />
+    </property>
+    <property name="PostedAt" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="2cb3e425-2818-46e9-a2ed-d340ed165401">
+      <column name="PostedAt" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="BlogId" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="4370c459-2198-4336-ab94-ee39af0a6c5e">
+      <column name="BlogId" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="UserId" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="a467e746-abc7-432e-b6a3-f7bc7b393692">
+      <column name="UserId" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+  </class>
+  <class name="Tag" entity-set="Tags" table="Tags" schema="dbo" p1:Guid="461bbd1d-2b15-449c-8aad-5cac196aeb22">
+    <id name="Id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="5f16d1ca-9182-4661-bdd4-624e0684b305">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Name" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="fc22178f-7497-440f-be02-d3d0d3c66522">
+      <column name="Name" not-null="False" length="50" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="ItemId" type="Int32" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="f615eff4-1e2d-4591-b825-0a4ab5ec22c2">
+      <column name="ItemId" not-null="False" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </property>
+    <property name="ItemType" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="1874c2dd-7433-4e71-bc8c-7c022bd296dc">
+      <column name="ItemType" not-null="False" length="50" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="User" entity-set="Users" table="Users" schema="dbo" p1:Guid="b7aed342-a488-4dcf-9fa6-a60fb7d419e3">
+    <id name="Id" type="Int32" value-generated="OnAdd" p1:ValidateRequired="true" p1:Guid="c741ac6c-e762-4bae-80d6-9233836d2ed2">
+      <column name="Id" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+    </id>
+    <property name="Password" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="078c8059-1168-4401-bce6-8704744244bb">
+      <column name="Password" not-null="False" length="50" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="Username" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="d2b3d2b3-5adf-4956-b7a7-783017c384c5">
+      <column name="Username" not-null="False" length="50" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="Email" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="4cd45970-5d8f-45d5-ae49-32ca2a3658cc">
+      <column name="Email" not-null="False" length="50" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+    <property name="CreatedAt" type="DateTime" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="b9527797-bcda-47a7-b461-284397eb01cd">
+      <column name="CreatedAt" not-null="False" sql-type="datetime2" p1:unicode="False" />
+    </property>
+    <property name="Bio" type="String" p1:nullable="True" p1:ValidateRequired="false" p1:Guid="0ba39f6a-813d-489e-bb99-0a38b89ca301">
+      <column name="Bio" not-null="False" length="50" sql-type="nvarchar" p1:unicode="True" />
+    </property>
+  </class>
+  <class name="UsersBlog" entity-set="UsersBlogs" table="UsersBlogs" schema="dbo" p1:Guid="508d03bd-58c6-45ff-9201-ade185d7e453">
+    <composite-id>
+      <key-property name="UserId" type="Int32" p1:ValidateRequired="true" p1:Guid="01e5dbad-bc92-4a7b-b18f-f62e9429cb86">
+        <column name="UserId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+      </key-property>
+      <key-property name="BlogId" type="Int32" p1:ValidateRequired="true" p1:Guid="8fd0d476-bde6-4e2b-a602-370c6798b4f5">
+        <column name="BlogId" not-null="True" precision="10" scale="0" sql-type="int" p1:unicode="False" />
+      </key-property>
+    </composite-id>
+  </class>
+  <associations>
+    <association name="Post_CategoriesPost" cardinality="OneToMany" p1:Guid="2d2c87ff-e909-4228-a876-d19f119c1763">
+      <end1 multiplicity="One" name="Post" class="CategoriesPost" relation-class="Post" constrained="True" p1:Guid="5418d566-8c49-4f7b-a202-c3b17b04c456">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CategoriesPosts" class="Post" relation-class="CategoriesPost" p1:Guid="164a43cd-4a79-4aca-958f-47f04a15f124">
+        <property name="PostId" />
+      </end2>
+    </association>
+    <association name="Category_CategoriesPost" cardinality="OneToMany" p1:Guid="f72f4a17-acf6-4698-9826-60f80aeb2481">
+      <end1 multiplicity="One" name="Category" class="CategoriesPost" relation-class="Category" constrained="True" p1:Guid="a1f5be17-3271-4efc-8c67-65f543b8bd8e">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="CategoriesPosts" class="Category" relation-class="CategoriesPost" p1:Guid="edfa1896-4cd2-4882-950f-61868f81e668">
+        <property name="CategoryId" />
+      </end2>
+    </association>
+    <association name="Post_Comment" cardinality="OneToMany" p1:Guid="37bef716-1a71-41bc-8075-1c4105d59d79">
+      <end1 multiplicity="ZeroOrOne" name="Post" class="Comment" relation-class="Post" constrained="True" p1:Guid="4ab80397-1fd2-43a7-8bff-de720fd5a119">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Comments" class="Post" relation-class="Comment" p1:Guid="636a7183-7798-4e84-bf86-500600d7bff0">
+        <property name="PostId" />
+      </end2>
+    </association>
+    <association name="Blog_Post" cardinality="OneToMany" p1:Guid="267a2e26-2e9c-476b-bcf5-71bdbea19b9f">
+      <end1 multiplicity="ZeroOrOne" name="Blog" class="Post" relation-class="Blog" constrained="True" p1:Guid="693d8c2c-3f82-4a8c-a3f2-d9e66461df54">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Posts" class="Blog" relation-class="Post" p1:Guid="60c882bc-29f8-4383-a896-deb72d043f57">
+        <property name="BlogId" />
+      </end2>
+    </association>
+    <association name="User_Post" cardinality="OneToMany" p1:Guid="5b523ad0-6691-447c-9067-17618eb67a53">
+      <end1 multiplicity="ZeroOrOne" name="User" class="Post" relation-class="User" constrained="True" p1:Guid="70338e30-706e-476e-b06c-a8b6b93f8d21">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="Posts" class="User" relation-class="Post" p1:Guid="a3e9c64a-06cb-4c49-8dd1-84f4fdecd586">
+        <property name="UserId" />
+      </end2>
+    </association>
+    <association name="User_UsersBlog" cardinality="OneToMany" p1:Guid="60ac6492-0bac-4748-b20c-e4694c53edd6">
+      <end1 multiplicity="One" name="User" class="UsersBlog" relation-class="User" constrained="True" p1:Guid="0123e085-fdc4-4858-b41e-926516979983">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="UsersBlogs" class="User" relation-class="UsersBlog" p1:Guid="ad4a71f4-75f5-4ec6-95a9-af109ad54f31">
+        <property name="UserId" />
+      </end2>
+    </association>
+    <association name="Blog_UsersBlog" cardinality="OneToMany" p1:Guid="82167ed6-2885-476c-ac43-f939c69a8d94">
+      <end1 multiplicity="One" name="Blog" class="UsersBlog" relation-class="Blog" constrained="True" p1:Guid="f7d79a66-3437-4459-ad8c-9219aa07c83d">
+        <property name="Id" />
+      </end1>
+      <end2 multiplicity="Many" name="UsersBlogs" class="Blog" relation-class="UsersBlog" p1:Guid="a9137085-6b58-499f-afe2-3522c3839160">
+        <property name="BlogId" />
+      </end2>
+    </association>
+  </associations>
+</efcore>

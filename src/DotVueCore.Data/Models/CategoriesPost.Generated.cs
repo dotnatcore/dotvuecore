@@ -18,27 +18,32 @@ using System.Collections.Generic;
 
 namespace DotVueCore.Data.Models
 {
-    public partial class Category {
+    public partial class CategoriesPost {
 
-        public Category()
+        public CategoriesPost()
         {
-            this.CategoriesPosts = new List<CategoriesPost>();
             OnCreated();
         }
 
-        public virtual int Id
+        public virtual int CategoryId
         {
             get;
             set;
         }
 
-        public virtual string Name
+        public virtual int PostId
         {
             get;
             set;
         }
 
-        public virtual IList<CategoriesPost> CategoriesPosts
+        public virtual Post Post
+        {
+            get;
+            set;
+        }
+
+        public virtual Category Category
         {
             get;
             set;
@@ -47,6 +52,30 @@ namespace DotVueCore.Data.Models
         #region Extensibility Method Definitions
 
         partial void OnCreated();
+
+        public override bool Equals(object obj)
+        {
+          CategoriesPost toCompare = obj as CategoriesPost;
+          if (toCompare == null)
+          {
+            return false;
+          }
+
+          if (!Object.Equals(this.CategoryId, toCompare.CategoryId))
+            return false;
+          if (!Object.Equals(this.PostId, toCompare.PostId))
+            return false;
+          
+          return true;
+        }
+
+        public override int GetHashCode()
+        {
+          int hashCode = 13;
+          hashCode = (hashCode * 7) + CategoryId.GetHashCode();
+          hashCode = (hashCode * 7) + PostId.GetHashCode();
+          return hashCode;
+        }
         
         #endregion
     }

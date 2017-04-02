@@ -10,6 +10,7 @@
     "Microsoft.EntityFrameworkCore.SqlServer.Design": "1.1.1",
     "Microsoft.EntityFrameworkCore.SqlServer": "1.1.1",
     "Microsoft.EntityFrameworkCore.Design.Core": "1.0.0-preview2-final",
+    "DotVueCore.Interfaces": "1.0.0-*",
     "DotVueCore.DataAccess": "1.0.0-*"
   },
   "tools": {

@@ -6,8 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using DotVueCore.ViewModel.Auths;
 
-// For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace DotVueCore.Web.Controllers
 {
     [Route("api/[controller]")]
@@ -34,7 +32,7 @@ namespace DotVueCore.Web.Controllers
 
         // POST api/auths
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody]UserLoginViewModel model)
+        public IActionResult Post([FromBody]UserLoginViewModel model)
         {
             Console.WriteLine(JsonConvert.SerializeObject(model));
             return Ok(new TokenViewModel()
