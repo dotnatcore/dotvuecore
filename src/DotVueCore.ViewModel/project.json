@@ -6,7 +6,7 @@
     "DotVueCore.ExMapper": "1.0.0-*",
     "DotVueCore.Interfaces": "1.0.0-*",
     "NETStandard.Library": "1.6.1",
-    "Newtonsoft.Json": "9.0.2-beta2"
+    "Newtonsoft.Json": "10.0.1"
   },
 
  "frameworks": {
