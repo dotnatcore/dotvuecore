@@ -8,36 +8,23 @@
 // the code is regenerated.
 //------------------------------------------------------------------------------
 
-using System;
-using System.Data;
 using System.Linq;
-using System.Linq.Expressions;
-using System.ComponentModel;
-using System.Reflection;
-using System.Data.Common;
-using System.Collections.Generic;
+using DotVueCore.DataAccess.Context;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Internal;
-using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace DotVueCore.Data.Models
 {
 
-    public partial class BlogEntities : DbContext
+    public partial class BlogEntities : EntityContextBase<BlogEntities> //DbContext
     {
+        public BlogEntities(DbContextOptions<BlogEntities> options) : base(options)
+        { }
 
-        public BlogEntities() :
-            base()
-        {
-            OnCreated();
-        }
-
-        public BlogEntities(DbContextOptions<BlogEntities> options) :
-            base(options)
-        {
-            OnCreated();
-        }
+        //public BlogEntities(DbContextOptions<BlogEntities> options) :
+        //    base(options)
+        //{
+        //    OnCreated();
+        //}
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

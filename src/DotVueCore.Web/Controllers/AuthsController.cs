@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using DotVueCore.DataAccess.Uow;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using DotVueCore.ViewModel.Auths;
+using DotVueCore.Web.Interceptors.Attributes;
 
 namespace DotVueCore.Web.Controllers
 {
+    [ControllerInterceptor]
     [Route("api/[controller]")]
     public class AuthsController : Controller
     {
@@ -32,7 +33,7 @@ namespace DotVueCore.Web.Controllers
 
         // POST api/auths
         [HttpPost]
-        public IActionResult Post([FromBody]UserLoginViewModel model)
+        public virtual IActionResult Post([FromBody]UserLoginViewModel model)
         {
             Console.WriteLine(JsonConvert.SerializeObject(model));
             return Ok(new TokenViewModel()

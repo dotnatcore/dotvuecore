@@ -1,15 +1,17 @@
+using DotVueCore.Web.Interceptors.Attributes;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DotVueCore.Web.Controllers
 {
+    [ControllerInterceptor]
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        public virtual IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Error()
+        public virtual IActionResult Error()
         {
             return View();
         }

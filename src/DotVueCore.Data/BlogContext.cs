@@ -252,7 +252,7 @@ namespace DotVueCore.Data
 
         public Task<List<IUser>> GetUsersAsync(Expression<Func<IUser, bool>> filter, Func<IQueryable<IUser>, IQueryable<IUser>> includes = null)
         {
-            var query = from s in Entities.Users.Where(filter) select s;
+            var query = (filter==null) ? Entities.Users : from s in Entities.Users.Where(filter) select s;
             return includes != null ? includes(query).ToListAsync() : query.ToListAsync();
         }
 

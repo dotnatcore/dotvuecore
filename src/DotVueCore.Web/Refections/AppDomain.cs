@@ -21,8 +21,8 @@ namespace DotVueCore.Web.Refections
 
         private static bool IsCandidateCompilationLibrary(Library compilationLibrary)
         {
-            return compilationLibrary.Name == ("EFCore.ViewModel")
-                || compilationLibrary.Dependencies.Any(d => d.Name.StartsWith("EFCore.ViewModel"));
+            return compilationLibrary.Name == ("DotVueCore.ViewModel")
+                || compilationLibrary.Dependencies.Any(d => d.Name.StartsWith("DotVueCore.ViewModel"));
         }
     }
 }

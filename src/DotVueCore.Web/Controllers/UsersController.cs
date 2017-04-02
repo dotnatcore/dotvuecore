@@ -1,33 +1,32 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
-using DotVueCore.Data.Models;
-using DotVueCore.DataAccess.Uow;
+using DotVueCore.Interfaces;
+using DotVueCore.ViewModel;
+using DotVueCore.Web.Interceptors.Attributes;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DotVueCore.Web.Controllers
 {
+    [ControllerInterceptor]
     [Route("api/[controller]")]
     public class UsersController : Controller
     {
-        private readonly IUowProvider _uowProvider;
-        public UsersController(IUowProvider uowProvider)
+        private readonly IBlogRepository _repository;
+        public UsersController(IBlogRepository repository)
         {
-            _uowProvider = uowProvider;
+            Console.WriteLine("UsersController Constructor");
+            _repository = repository;
         }
         // GET: api/users
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public virtual async Task<IActionResult> Get()
         {
-            using (var uow = _uowProvider.CreateUnitOfWork())
+            Console.WriteLine("UsersController Gets");
+            using (var ctx = _repository.CreateBlogContext(false))
             {
-                var repository = uow.GetRepository<User>();
-                //var includes = new Includes<QuestionType>(query =>
-                //{
-                //    return query.Include(b => b.Questions)
-                //                    .ThenInclude(a => a.RtoInfo);
-                //});
-                var users = await repository.GetAllAsync(null, null);
-                return Ok(users.Take(15));
+                var users = await ctx.GetUsersAsync(null, null);
+                return Ok(users.Select(UserViewModel.Fetch));
             }
         }
 

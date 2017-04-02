@@ -18,7 +18,9 @@ using Nancy.Owin;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Reflection;
+using DotVueCore.DataAccess.Uow;
 using DotVueCore.ExMapper;
+using DotVueCore.DataAccess.Startup;
 
 namespace DotVueCore.Web
 {
@@ -40,8 +42,14 @@ namespace DotVueCore.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
+            //Interface navigate property
             services.AddDbContext<BlogEntities>(options => options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
             services.AddTransient<IBlogRepository, BlogRepository>();
+
+            //Generic repositroy
+            //services.AddDbContext<BlogEntities>(options => options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
+            services.AddDataAccess<BlogEntities>();
+            services.AddTransient<IUowProvider, UowProvider>();
 
             services.AddCors();
             // Add framework services.
@@ -53,7 +61,7 @@ namespace DotVueCore.Web
                         //options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
                     });
 
-            services.AddMvcCore();
+            //services.AddMvcCore();
 
             Mapper.Initialize(config => {
                 var assemblys = AppDomain.CurrentDomain.GetAssemblies().Where(p => p.FullName.Contains("DotVueCore.ViewModel"));
@@ -62,6 +70,7 @@ namespace DotVueCore.Web
                     var types = assembly.GetTypes();
                     foreach (var type in types)
                     {
+                        Console.WriteLine(type.GetTypeInfo().FullName);
                         type.GetTypeInfo().Assembly.MapTypes(config);
                     }
                 }
