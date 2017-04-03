@@ -98,16 +98,18 @@ export default {
             // AUTH WILL BE CALLED with data
             this.$store.dispatch('authenticateUser', this.credentials)
                 .then(res => {
-                    this.loading = false;
+                    this.loading = false
+                    this.setLayoutNeeded(true)
+                    this.setIsLoginPage(false)
                     this.$router.push({
                         name: 'home',
                         params: {
                         }
-                    });
+                    })
                 })
                 .catch(res => {
-                    this.loading = false;
-                    this.errors = res.errors;
+                    this.loading = false
+                    this.errors = res.errors
                 });
         },
         startAnimation () {

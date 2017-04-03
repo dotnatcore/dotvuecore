@@ -16,7 +16,6 @@ const router= new VueRouter({
     { name:'login',path: '/login', component: load('views/auth/login'),meta: {requiresAuth: false} },
     { name:'logout',path: '/logout', component: load('views/auth/logout'),meta: {requiresAuth: false} },
     { name:'register',path: '/register', component: load('views/auth/register'),meta: {requiresAuth: false} },
-    { name:'questiontype',path: '/questiontype', component: load('views/questiontype/questiontype'),meta: {requiresAuth: true} },
     { name:'error404',path: '*', component: load('Error404')}
   ]
 })
