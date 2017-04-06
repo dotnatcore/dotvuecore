@@ -60,7 +60,8 @@
   },
   "buildOptions": {
     "emitEntryPoint": true,
-    "preserveCompilationContext": true
+    "preserveCompilationContext": true,
+    "debugType": "portable"
   },
   "runtimeOptions": {
     "configProperties": {
@@ -74,7 +75,10 @@
       "node_modules",
       "Views",
       "web.config",
-      "wwwroot"
+      "wwwroot",
+      "docker-compose.yml",
+      "Dockerfile",
+      ".dockerignore"
     ]
   },
   "scripts": {
