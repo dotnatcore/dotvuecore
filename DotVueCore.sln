@@ -1,29 +1,28 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26114.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5233A0F5-200F-4246-A6D1-21B4BD39428B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1B93F498-EBC1-486D-AE41-D9E2A65401DA}"
 	ProjectSection(SolutionItems) = preProject
 		app.json = app.json
-		global.json = global.json
 	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DotVueCore.Web", "src\DotVueCore.Web\DotVueCore.Web.xproj", "{3CF69976-44F3-475B-A6D4-AAA936018FAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotVueCore.Web", "src\DotVueCore.Web\DotVueCore.Web.csproj", "{3CF69976-44F3-475B-A6D4-AAA936018FAA}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DotVueCore.SockJs", "src\DotVueCore.SockJs\DotVueCore.SockJs.xproj", "{597A5ED3-2D1A-4F57-90C7-63ED4656F89C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotVueCore.SockJs", "src\DotVueCore.SockJs\DotVueCore.SockJs.csproj", "{597A5ED3-2D1A-4F57-90C7-63ED4656F89C}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DotVueCore.DataAccess", "src\DotVueCore.DataAccess\DotVueCore.DataAccess.xproj", "{F48C4390-CC0C-4CC7-BCFF-3A73230490D0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotVueCore.DataAccess", "src\DotVueCore.DataAccess\DotVueCore.DataAccess.csproj", "{F48C4390-CC0C-4CC7-BCFF-3A73230490D0}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DotVueCore.ViewModel", "src\DotVueCore.ViewModel\DotVueCore.ViewModel.xproj", "{F02E1618-CC5B-4528-96E1-2B461D158FCB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotVueCore.ViewModel", "src\DotVueCore.ViewModel\DotVueCore.ViewModel.csproj", "{F02E1618-CC5B-4528-96E1-2B461D158FCB}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DotVueCore.Data", "src\DotVueCore.Data\DotVueCore.Data.xproj", "{88EC13D7-B561-4F1E-8FB6-4BCA40FEEBEA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotVueCore.Data", "src\DotVueCore.Data\DotVueCore.Data.csproj", "{88EC13D7-B561-4F1E-8FB6-4BCA40FEEBEA}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DotVueCore.Interfaces", "src\DotVueCore.Interfaces\DotVueCore.Interfaces.xproj", "{85002A68-0C23-4878-8E4C-324DE467A4E6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotVueCore.Interfaces", "src\DotVueCore.Interfaces\DotVueCore.Interfaces.csproj", "{85002A68-0C23-4878-8E4C-324DE467A4E6}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DotVueCore.ExMapper", "src\DotVueCore.ExMapper\DotVueCore.ExMapper.xproj", "{ACEDC3F4-8813-4B93-A828-F2C2C486C8C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotVueCore.ExMapper", "src\DotVueCore.ExMapper\DotVueCore.ExMapper.csproj", "{ACEDC3F4-8813-4B93-A828-F2C2C486C8C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
